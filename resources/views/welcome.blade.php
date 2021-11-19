@@ -50,13 +50,15 @@
                     <thead>
                         <th>ID</th>
                         <th>Descripcion</th>
+                        <th>Categoría</th>
                     </thead>
                     <tbody>
                         @if ( $productos->count() > 0 )
                             @foreach ($productos as $producto)
                                 <tr>
                                     <td>{{ $producto->id }}</td>
-                                    <td>{{ $producto->descrpcion }}</td>
+                                    <td>{{ $producto->descripcion }}</td>
+                                    <td>{{ $producto->categorias->descripcion }}</td>
                                 </tr>
                             @endforeach
                         @else
@@ -64,6 +66,9 @@
                         @endif
                     </tbody>
                 </table>
+
+
+
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})

@@ -11,7 +11,9 @@ class RelacionController extends Controller
 
     public function index() {
         $productos  = Producto::all();
-        return view('welcome', compact('productos'));
+        $categorias  = Categoria::all();
+
+        return view('welcome', compact('productos', 'categorias'));
     }
 
 }
