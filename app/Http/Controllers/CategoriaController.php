@@ -33,8 +33,9 @@ class CategoriaController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Categoria $categoria)
     {
+        return view('categorias.categoriaShow', compact('categoria'));
     }
 
 
@@ -51,8 +52,10 @@ class CategoriaController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy(Categoria $categoria)
     {
-        //
+
+        $categoria->delete();
+        return redirect()->route('categorias.index');
     }
 }

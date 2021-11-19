@@ -10,7 +10,7 @@
     @if ( $categorias->count() > 0 )
         <ul>
             @foreach ($categorias as $categoria)
-                <li><a href="{{ route('categorias.edit', $categoria) }}">{{ $categoria->descripcion }}</a></li>
+                <li><a href="{{ route('categorias.show', $categoria) }}">{{ $categoria->descripcion }}</a></li>
             @endforeach
         </ul>
     @else
