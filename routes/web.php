@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RelacionController;
 /*
@@ -19,7 +20,7 @@ Route::get('/', [RelacionController::class, 'index']);
 
 Route::resource('categorias', CategoriaController::class)->parameters(['categorias' => 'categoria'])->names('categorias');
 
-Route::resource('productos', CategoriaController::class)->parameters(['productos' => 'producto'])->names('productos');
+Route::resource('productos', ProductoController::class)->parameters(['productos' => 'producto'])->names('productos');
 // Route::get('/', function () {
 //     return view('welcome');
 // });
