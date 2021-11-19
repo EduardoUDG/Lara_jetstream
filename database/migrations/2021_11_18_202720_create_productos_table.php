@@ -23,7 +23,7 @@ class CreateProductosTable extends Migration
                   ->nullable()
                   ->constrained('categorias')
                   ->cascadeOnUpdate()
-                  ->nullOnDelete();
+                  ->onDelete('cascade');
         });
     }
 
