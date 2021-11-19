@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RelacionController;
 /*
@@ -15,6 +16,10 @@ use App\Http\Controllers\RelacionController;
 
 Route::get('/', [RelacionController::class, 'index']);
 
+
+Route::resource('categorias', CategoriaController::class)->parameters(['categorias' => 'categoria'])->names('categorias');
+
+Route::resource('productos', CategoriaController::class)->parameters(['productos' => 'producto'])->names('productos');
 // Route::get('/', function () {
 //     return view('welcome');
 // });

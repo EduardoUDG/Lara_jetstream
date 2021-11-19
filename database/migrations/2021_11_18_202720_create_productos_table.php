@@ -15,8 +15,8 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('descripcion');
+            $table->timestamps();
 
             // $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->foreignId('id_categoria')
