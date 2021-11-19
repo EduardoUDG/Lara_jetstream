@@ -31,23 +31,29 @@ class ProductoController extends Controller
         return redirect()->route('productos.index');
     }
 
-    public function show($id)
+    public function show(Producto $producto)
     {
-        //
+        return view('productos.productoShow', compact('producto'));
     }
 
-    public function edit($id)
+    public function edit(Producto $producto)
     {
-        //
+        $categorias = Categoria::all();
+        return view('productos.productoEdit', compact('producto', 'categorias'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Producto $producto)
     {
-        //
+        $producto->descripcion = $request->descripcion;
+        $producto->id_categoria = $request->id_categoria;
+        $producto->save();
+
+        return redirect()->route('productos.index');
     }
 
-    public function destroy($id)
+    public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return redirect()->route('productos.index');
     }
 }

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>Registrar un nuevo producto</h1>
+    <h1>Crear un nuevo producto</h1>
     <a href="{{ route('productos.index') }}">Regresar a productos</a><br><br>
     <hr>
 
@@ -24,7 +24,7 @@
         <br><br><br><br>
 
 
-        <button type="submit">Registrar producto</button>
+        <button type="submit">Crear producto</button>
     </form>
 
 @endsection

@@ -20,9 +20,9 @@
                     <tbody>
                         @if ( $productos->count() > 0 )
                             @foreach ($productos as $producto)
-                                <tr>
+                                <tr href="">
                                     <td>{{ $producto->id }}</td>
-                                    <td>{{ $producto->descripcion }}</td>
+                                    <td><a href="{{ route('productos.show', $producto) }}">{{ $producto->descripcion }}</a></td>
                                     <td>{{ $producto->categorias->descripcion }}</td>
                                 </tr>
                             @endforeach
