@@ -35,18 +35,19 @@ class CategoriaController extends Controller
 
     public function show($id)
     {
-        //
     }
 
 
-    public function edit($id)
+    public function edit(Categoria $categoria)
     {
-        //
+        return view('categorias.categoriaEdit', compact('categoria'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Categoria $categoria)
     {
-        //
+        $categoria->descripcion = $request->descripcion;
+        $categoria->save();
+        return redirect()->route('categorias.index');
     }
 
 
