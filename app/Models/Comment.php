@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Teacher;
 use App\Models\User;
 
-
 class Comment extends Model
 {
     use HasFactory;
@@ -19,5 +18,6 @@ class Comment extends Model
     public function user() {
         return $this->belongsTo(User::class, 'id');
     }
+
 
 }
