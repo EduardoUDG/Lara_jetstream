@@ -10,10 +10,8 @@ class RelacionController extends Controller
 {
 
     public function index() {
-        $productos  = Producto::all();
-        $categorias  = Categoria::all();
 
-        return view('welcome', compact('productos', 'categorias'));
+        return view('welcome');
     }
 
 }

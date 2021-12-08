@@ -4,6 +4,8 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RelacionController;
+use App\Http\Controllers\ToyController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +23,8 @@ Route::get('/', [RelacionController::class, 'index']);
 Route::resource('categorias', CategoriaController::class)->parameters(['categorias' => 'categoria'])->names('categorias');
 
 Route::resource('productos', ProductoController::class)->parameters(['productos' => 'producto'])->names('productos');
+
+Route::resource('toys', ToyController::class)->names('toys');
 // Route::get('/', function () {
 //     return view('welcome');
 // });

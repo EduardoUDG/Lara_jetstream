@@ -46,26 +46,6 @@
                 </div>
 
 
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <th>ID</th>
-                        <th>Descripcion</th>
-                        <th>Categoría</th>
-                    </thead>
-                    <tbody>
-                        @if ( $productos->count() > 0 )
-                            @foreach ($productos as $producto)
-                                <tr>
-                                    <td>{{ $producto->id }}</td>
-                                    <td>{{ $producto->descripcion }}</td>
-                                    <td>{{ $producto->categorias->descripcion }}</td>
-                                </tr>
-                            @endforeach
-                        @else
-                            <p>No hay datos en la base de datos</p>
-                        @endif
-                    </tbody>
-                </table>
 
 
 
