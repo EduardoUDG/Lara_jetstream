@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div >
+    <div class="max-w-7xl mx-auto my-3 py-5 px-4 sm:px-6 lg:px-8 bg-white shadow">
         <h1>Este es el home</h1>
     </div>
 
