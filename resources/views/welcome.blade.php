@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-purple-500 leading-tight">
+            Hola mundo
+        </h2>
+    </x-slot>
+
+    <div >
+        <h1>Este es el home</h1>
+    </div>
+
+</x-app-layout>
+
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -52,4 +66,5 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}
+

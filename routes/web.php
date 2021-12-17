@@ -17,7 +17,7 @@ use App\Http\Controllers\ToyController;
 |
 */
 
-Route::get('/', [RelacionController::class, 'index']);
+Route::get('/', [RelacionController::class, 'index'])->name('home');
 
 
 Route::resource('categorias', CategoriaController::class)->parameters(['categorias' => 'categoria'])->names('categorias');
