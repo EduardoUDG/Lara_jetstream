@@ -32,3 +32,13 @@ Route::resource('toys', ToyController::class)->names('toys');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('prueba', function () {
+    return "Iniciaste sesión correctamente";
+})->middleware(['age', 'auth:sanctum' ]);
+
+Route::get('no-autorizado', function () {
+    return "Usted no es mayor de edad";
+});
+
+
