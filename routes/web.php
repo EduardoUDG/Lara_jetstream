@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RelacionController;
+use App\Http\Controllers\TodoController;
 use App\Http\Controllers\ToyController;
 
 /*
@@ -41,4 +42,5 @@ Route::get('no-autorizado', function () {
     return "Usted no es mayor de edad";
 });
 
+Route::resource('todos', TodoController::class)->parameters(['todos'=> 'todo'])->names('todos');
 

@@ -6,6 +6,11 @@
             'active' => request()->routeIs('home')
         ],
         [
+            'name' => 'Todos',
+            'route' => route('todos.index'),
+            'active' => request()->routeIs('todos*')
+        ],
+        [
             'name' => 'prueba',
             'route' => '#',
             'active' => false
