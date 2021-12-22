@@ -60,6 +60,13 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    // relación uno  a uno
+    public function profile() {
+        return $this->hasOne('App\Models\Profile');
+    }
+
+
+    // Relación uno a muchos
     public function comments() {
         return $this->hasMany(Comment::class, 'user_id');
     }
