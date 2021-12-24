@@ -77,4 +77,11 @@ class User extends Authenticatable
     public function comments() {
         return $this->hasMany(Comment::class, 'user_id');
     }
+
+    // Relación muchos a muchos
+    public function roles() {
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+
 }
