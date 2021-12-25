@@ -12,7 +12,7 @@ class ToyController extends Controller
 
     public function index()
     {
-        $toys = Toy::paginate(5);
+        $toys = Toy::all();
         return view('toys.toyIndex', compact('toys'));
     }
 
@@ -21,12 +21,9 @@ class ToyController extends Controller
         return view('toys.toyCreate');
     }
 
-    public function store(StoreToy $request)
+    public function store(StoreToy $request )
     {
-        $toy = new Toy();
-        $toy->name = $request->name;
-        $toy->price = $request->price;
-        $toy->save();
+        Toy::create( $request->all() );
         return redirect()->route('toys.index')->with('info', 'Juguete creado!');
     }
 

@@ -26,6 +26,7 @@ Route::resource('categorias', CategoriaController::class)->parameters(['categori
 Route::resource('productos', ProductoController::class)->parameters(['productos' => 'producto'])->names('productos');
 
 Route::resource('toys', ToyController::class)->names('toys');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

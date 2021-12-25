@@ -24,6 +24,11 @@
             'name' => 'TOP',
             'route' => '#',
             'active' => false
+        ],
+        [
+            'name' => 'Toys',
+            'route' => route('toys.index'),
+            'active' => request()->routeIs('toys*')
         ]
     ];
 @endphp
