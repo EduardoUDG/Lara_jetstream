@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use PhpParser\Node\Expr\FuncCall;
 
 class Post extends Model
 {
@@ -28,6 +29,10 @@ class Post extends Model
         return $this->morphMany('App\Models\Comment', 'commentable');
     }
 
+    // Relación muchos a muchos polimórfica
+    public function tags() {
+        return $this->morphToMany('App\Models\Tag', 'taggable');
+    }
 
 
 }
