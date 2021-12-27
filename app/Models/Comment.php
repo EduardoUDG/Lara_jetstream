@@ -11,12 +11,14 @@ class Comment extends Model
 {
     use HasFactory;
 
-    public function teacher() {
-        return $this->belongsTo(Teacher::class, 'id');
+    // Relación uno a muchos (inversa)
+    public function user() {
+        return $this->belongsTo('App\Models\User');
     }
 
-    public function user() {
-        return $this->belongsTo(User::class, 'id');
+    // Relación uno a muchos polimórfica
+    public function commentable() {
+        return $this->morphTo();
     }
 
 

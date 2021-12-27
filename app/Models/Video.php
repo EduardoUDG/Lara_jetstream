@@ -9,9 +9,14 @@ class Video extends Model
 {
     use HasFactory;
 
-    // relación uno a muchos (inversa)
+    // Relación uno a muchos (inversa)
     public function user() {
         return $this->belongsTo('App\Models\User');
+    }
+
+    // Relación uno a muchos polimórfica
+    public function comments() {
+        return $this->morphMany('App\Models\Video', 'commentable');
     }
 
 }

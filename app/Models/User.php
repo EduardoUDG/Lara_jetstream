@@ -75,7 +75,7 @@ class User extends Authenticatable
     }
 
     public function comments() {
-        return $this->hasMany(Comment::class, 'user_id');
+        return $this->hasMany('App\Models\Comment', 'user_id');
     }
 
     // Relación muchos a muchos
